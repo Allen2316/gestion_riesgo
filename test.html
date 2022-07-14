@@ -5,50 +5,338 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Evaluación</title>
 </head>
 
 <body>
     <header>
-        <ul class="menu">
-            <a href="./index.html">
-                <li class="item">Inicio</li>
-            </a>
-            <a href="#">
-                <li class="item">Evaluacion</li>
-            </a>
-            <a href="./rating.html">
-                <li class="item">Rating</li>
-            </a>
-        </ul>
+        <nav class="navbar navbar-expand-lg bg-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Gestion de Riesgos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Evaluación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./rating.html">Rating</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <td></td>
-                    <td>Nivel de Habilidad</td>
-                    <td>Motivo</td>
-                    <td>Oportunidad</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </thead>
-            <tbody>
+    <div class="container my-4 shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="row g-3 align-items-center mb-3">
+            <div class="col-auto">
+                <label for="riesgo" class="col-form-label">Riesgo</label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="riesgo" class="form-control" title="Ingrese el riesgo">
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="9" class="text-center">Probabilidad</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" colspan="4" class="text-center">Factores de agente de amenaza</th>
+                        <th scope="col"></th>
+                        <th scope="col" colspan="4" class="text-center">Factores de vulnerabilidad</th>
+                    </tr>
 
-            </tbody>
-        </table>
+                    <tr>
+                        <th scope="col">Nivel de Habilidad</th>
+                        <th scope="col">Motivo</th>
+                        <th scope="col">Oportunidad</th>
+                        <th scope="col">Tamaño</th>
+                        <th scope="col"></th>
+                        <th scope="col">Facilidad para descubrir</th>
+                        <th scope="col">Facilidad para la Explotacion</th>
+                        <th scope="col">Conciencia</th>
+                        <th scope="col">Detección de Intrusión</th>
+
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td>
+                            <select id="habilidad" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - No requiere habilidades tecnicas</option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - Algunas Habilidades tecnicas</option>
+                                <option value="4">4 - </option>
+                                <option value="5">5 - Uso Avanzado de computadoras</option>
+                                <option value="6">6 - Habilidades en Redes y Programación</option>
+                                <option value="7">7 - </option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Habilidades en Ciberseguridad</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="motivo" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - Recompensa baja o nula </option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - </option>
+                                <option value="4">4 - Posible recompensa</option>
+                                <option value="5">5 - </option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - Ganar Prestigio</option>
+                                <option value="8">8 - Arruinar La imagen de el Software</option>
+                                <option value="9">9 - Alta recompensa</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="oportunidad" class="form-select">
+                                <option value="0">0 - Se requiere acceso completo o recursos caros</option>
+                                <option value="1">1 - </option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - </option>
+                                <option value="4">4 - Acceso especial o recursos requeridos</option>
+                                <option value="5">5 - </option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - Se requiere cierto acceso o recursos</option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - No se requiere acceso ni recursos</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="tamanio" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - </option>
+                                <option value="2">2 - Desarrolladores, administradores de sistemas</option>
+                                <option value="3">3 - </option>
+                                <option value="4">4 - Usuarios de intranet</option>
+                                <option value="5">5 - Partners</option>
+                                <option value="6">6 - Usuarios autenticados</option>
+                                <option value="7">7 - </option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Usuarios de internet anónimos</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td>
+                            <select id="descubrir" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - Practicamente Imposible</option>
+                                <option value="2">2 - Complicado</option>
+                                <option value="3">3 - Dificil</option>
+                                <option value="4">4 - </option>
+                                <option value="5">5 - </option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - Facil</option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Disponible desde herramientas automizadas</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="explotacion" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - Teoricamente</option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - Dificil</option>
+                                <option value="4">4 - </option>
+                                <option value="5">5 - Facil</option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - </option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Disponible desde herramientas automizadas</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="conciencia" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - Desconocido</option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - </option>
+                                <option value="4">4 - Oculto</option>
+                                <option value="5">5 - </option>
+                                <option value="6">6 - Ovio</option>
+                                <option value="7">7 - </option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Conocimiento Publico</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="intrusion" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - Detección activa en aplicación</option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - Registrado y revisado</option>
+                                <option value="4">4 - </option>
+                                <option value="5">5 - </option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - </option>
+                                <option value="8">8 - Registrado sin revisión</option>
+                                <option value="9">9 - No Loegado</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="textProb">Probabilidad general:</td>
+                        <td id="resultado"></td>
+                        <td colspan="4" id="nivel"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- tabla 2 -->
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="9" class="text-center">Impacto</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" colspan="4" class="text-center">Impacto Técnico</th>
+                        <th scope="col"></th>
+                        <th scope="col" colspan="4" class="text-center">Impacto de negocio</th>
+                    </tr>
+
+                    <tr>
+                        <th scope="col">Pérdida de la Confidencialidad</th>
+                        <th scope="col">Pérdida de Integridad</th>
+                        <th scope="col">Pérdida en Disponibilidad</th>
+                        <th scope="col">Pérdida en Responsabilidad</th>
+                        <th scope="col"></th>
+                        <th scope="col">Daño Financiero</th>
+                        <th scope="col">Daño en Reputación</th>
+                        <th scope="col">No cumplimiento</th>
+                        <th scope="col">Violación de Privacidad</th>
+
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="table-success">
+                        <td colspan="2" class="text-end">Impacto general:</td>
+                        <td class="text-center">7.5</td>
+                        <td>ALTO</td>
+                        <td class="bg-white"></td>
+                        <td colspan="2" class="text-end">Impacto comercial general:</td>
+                        <td class="text-center">7.5</td>
+                        <td>ALTO</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="container">
+            <div class="row justify-content-evenly">
+                <div class="col-6">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="5" class="text-center">Gravedad general del riesgo =
+                                        Probabilidad x Impacto</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td rowspan="4" class="align-middle">Impacto</td>
+                                    <td>ALTO</td>
+                                    <td class="table-info">Medium</td>
+                                    <td class="table-danger">High</td>
+                                    <td class="table-secondary">CRITICO</td>
+                                </tr>
+                                <tr>
+                                    <td>MEDIO</td>
+                                    <td class="table-warning">Low</td>
+                                    <td class="table-info">Medium</td>
+                                    <td class="table-danger">ALTO(AQUI)</td>
+                                </tr>
+                                <tr>
+                                    <td>BAJO</td>
+                                    <td class="table-success">Note</td>
+                                    <td class="table-warning">Low</td>
+                                    <td class="table-info">MEDIO</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>BAJO</td>
+                                    <td>MEDIO</td>
+                                    <td>ALTO</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td colspan="4" class="text-center">Probabilidad</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="2" class="text-center">Niveles de Probabilidad e impacto
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td class="table-success">0 to < 3</td>
+                                    <td>BAJO</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-warning">3 to < 6</td>
+                                    <td>MEDIO</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-danger">6 to 9</td>
+                                    <td>ALTO</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Características</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Precios</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Acerca</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2022 Luis Sarmiento - ALLEN23</p>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

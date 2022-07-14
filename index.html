@@ -5,55 +5,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Gestion de riesgos</title>
 </head>
 
 <body>
-    <header class="menu-sidebar">
-        <ul class="menu">
-            <a href="#">
-                <li class="item">Inicio</li>
-            </a>
-            <a href="./test.html">
-                <li class="item">Evaluacion</li>
-            </a>
-            <a href="./rating.html">
-                <li class="item">Rating</li>
-            </a>
-        </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Gestion de Riesgos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./test.html">Evaluación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./rating.html">Rating</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <div class="container">
-        <h1>The OWASP Risk Rating Methodology</h1>
-        <a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology" target="_blank">Fuente oficial de OWASP</a>
-        <p>
+    <div class="container" style="min-height: 95vh;">
+        <h1 class="text-center">The OWASP Risk Rating Methodology</h1>
+        <a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology" target="_blank">Fuente oficial de
+            OWASP</a>
+        <p class="text-justify">
             Descubrir vulnerabilidades es importante, pero poder estimar el riesgo asociado para el negocio es igual de
             importante. Al principio del ciclo de vida, uno puede identificar problemas de seguridad en la arquitectura
             o el diseño mediante el uso de modelos de amenazas. Más tarde, uno puede encontrar problemas de seguridad
             mediante la revisión de código o las pruebas de penetración. O es posible que no se descubran problemas
             hasta que la aplicación esté en producción y se vea comprometida.
         </p>
-        <p>
+        <p class="text-justify">
             Siguiendo el enfoque aquí, es posible estimar la gravedad de todos estos riesgos para el negocio y tomar una
             decisión informada sobre qué hacer con respecto a esos riesgos. Tener un sistema para calificar los riesgos
             ahorrará tiempo y eliminará las discusiones sobre las prioridades. Este sistema ayudará a garantizar que la
             empresa no se distraiga con riesgos menores, al tiempo que ignora los riesgos más graves que se entienden
             menos.
         </p>
-        <p>Idealmente, habría un sistema de calificación de riesgo universal que estimaría con precisión todos los
+        <p class="text-justify">Idealmente, habría un sistema de calificación de riesgo universal que estimaría con
+            precisión todos los
             riesgos para todas las organizaciones. Pero una vulnerabilidad que es crítica para una organización puede no
             ser muy importante para otra. Aquí se presenta un marco básico que debe ser personalizado para la
             organización en particular.
         </p>
-        <p>Los autores se han esforzado por hacer que este modelo sea fácil de usar, manteniendo suficientes detalles
+        <p class="text-justify">Los autores se han esforzado por hacer que este modelo sea fácil de usar, manteniendo
+            suficientes detalles
             para realizar estimaciones precisas de riesgo. Consulte la sección a continuación sobre personalización para
             obtener más información sobre cómo adaptar el modelo para su uso en una organización específica.
-        </p>        
+        </p>
     </div>
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Características</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Precios</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Acerca</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2022 Company, Inc</p>
+    </footer>
 
     <!-- Scripts -->
     <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

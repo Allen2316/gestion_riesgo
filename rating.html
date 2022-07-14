@@ -5,108 +5,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Rating</title>
 </head>
 
 <body>
     <header>
-        <ul class="menu">
-            <a href="./index.html">
-                <li class="item">Inicio</li>
-            </a>
-            <a href="./test.html">
-                <li class="item">Evaluacion</li>
-            </a>
-            <a href="#">
-                <li class="item">Rating</li>
-            </a>
-        </ul>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Gestion de Riesgos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./test.html">Evaluación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Rating</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <td></td>
-                    <td>Nivel de Habilidad</td>
-                    <td>Motivo</td>
-                    <td>Oportunidad</td>
-                    <td>Tamaño</td>
-                    <td>Facilidad de Descubrir</td>
-                    <td>Facil de Explotar</td>
-                    <td>Conciencia</td>
-                    <td>Deteccion de Intrusion</td>
-                    <td>Perdida de Confidencialidad</td>
-                    <td>Perdida de Integridad</td>
-                    <td>Perdida de Disponibilidad</td>
-                    <td>Perdida de responsabilidad</td>
-                    <td>Daño Financiero</td>
-                    <td>Daño en la Reputacion</td>
-                    <td>Incumplimiento</td>
-                    <td>Violacion de la privacidad</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>0</td>
-                    <td></td>
-                    <td></td>
-                    <td>Se requiere acceso completo o recursos caros</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Ninguno</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>No requiere habilidades tecnicas</td>
-                    <td>Recompensa baja o nula</td>
-                    <td></td>
-                    <td></td>
-                    <td>Practicamente Imposible</td>
-                    <td>Teoricamente</td>
-                    <td>Desconocido</td>
-                    <td>Detección activa en aplicación</td>
-                    <td></td>
-                    <td>Datos mínimos ligeramente corruptos</td>
-                    <td>Servicios secundarios mínimos interrumpidos</td>
-                    <td>totalmente rastreable</td>
-                    <td>Menos del costo para arreglar la vulnerabilidad</td>
-                    <td>Daño Mínimo</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Desarrolladores, administradores de sistemas</td>
-                    <td>Complicado</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Datos mínimos no sensibles divulgados</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>violación menor</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td0pt'>Algunas
-                        Habilidades tecnicas</td>
+    <div class="container my-4">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead">
+                    <tr class="table-danger">
+                        <th scope="col"></th>
+                        <th scope="col">Nivel de Habilidad</th>
+                        <th scope="col">Motivo</th>
+                        <th scope="col">Oportunidad</th>
+                        <th scope="col">Tamaño</th>
+                        <th scope="col">Facilidad de Descubrir</th>
+                        <th scope="col">Facil de Explotar</th>
+                        <th scope="col">Conciencia</th>
+                        <th scope="col">Deteccion de Intrusion</th>
+                        <th scope="col">Perdida de Confidencialidad</th>
+                        <th scope="col">Perdida de Integridad</th>
+                        <th scope="col">Perdida de Disponibilidad</th>
+                        <th scope="col">Perdida de responsabilidad</th>
+                        <th scope="col">Daño Financiero</th>
+                        <th scope="col">Daño en la Reputacion</th>
+                        <th scope="col">Incumplimiento</th>
+                        <th scope="col">Violacion de la privacidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-success">0</td>
+                        <td></td>
+                        <td></td>
+                        <td>Se requiere acceso completo o recursos caros</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Ninguno</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="table-success">1</td>
+                        <td>No requiere habilidades tecnicas</td>
+                        <td>Recompensa baja o nula</td>
+                        <td></td>
+                        <td></td>
+                        <td>Practicamente Imposible</td>
+                        <td>Teoricamente</td>
+                        <td>Desconocido</td>
+                        <td>Detección activa en aplicación</td>
+                        <td></td>
+                        <td>Datos mínimos ligeramente corruptos</td>
+                        <td>Servicios secundarios mínimos interrumpidos</td>
+                        <td>totalmente rastreable</td>
+                        <td>Menos del costo para arreglar la vulnerabilidad</td>
+                        <td>Daño Mínimo</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="table-success">2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Desarrolladores, administradores de sistemas</td>
+                        <td>Complicado</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Datos mínimos no sensibles divulgados</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>violación menor</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="table-success">3</td>
+                        <td>Algunas Habilidades tecnicas</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -122,128 +137,136 @@
                         <td></td>
                         <td></td>
                         <td>Un individuo</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td></td>
-                    <td>Posible recompensa</td>
-                    <td>Acceso especial o recursos requeridos</td>
-                    <td>Usuarios de intranet</td>
-                    <td></td>
-                    <td></td>
-                    <td>Oculto</td>
-                    <td></td>
-                    <td>Datos críticos mínimos revelados, datos no sensibles extensos
-                        revelados</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Pérdida de cuentas importantes</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Uso Avanzado de computadoras</td>
-                    <td></td>
-                    <td></td>
-                    <td>Partners</td>
-                    <td></td>
-                    <td>Facil</td>
-                    <td></td>
-                    <td></td>
-                    <td>Extensos datos críticos revelados</td>
-                    <td>Amplios datos ligeramente corruptos</td>
-                    <td>Servicios primarios mínimos interrumpidos, servicios secundarios
-                        extensivos interrumpidos</td>
-                    <td></td>
-                    <td></td>
-                    <td>Pérdida de buena voluntad</td>
-                    <td>Clara violación</td>
-                    <td>cientos personas</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Habilidades
-                        en Redes y Programación</td>
-                    <td></td>
-                    <td></td>
-                    <td>Usuarios autenticados</td>
-                    <td></td>
-                    <td></td>
-                    <td>Ovio</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td></td>
-                    <td>Ganar Prestigio</td>
-                    <td>Se requiere cierto acceso o recursos</td>
-                    <td></td>
-                    <td>Facil</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Amplios datos seriamente corruptos</td>
-                    <td>Amplios servicios primarios interrumpidos</td>
-                    <td>Posiblemente rastreable</td>
-                    <td>Efecto significativo en la ganancia anual</td>
-                    <td></td>
-                    <td>Violación de alto nivel</td>
-                    <td>Miles Personas</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td></td>
-                    <td>Arruinar La imagen de el Software</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Registrado sin revisión</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Habilidades en Ciberseguridad</td>
-                    <td>Alta recompensa</td>
-                    <td>No se requiere acceso ni recursos</td>
-                    <td>Usuarios de internet anónimos</td>
-                    <td>Disponible desde herramientas automizadas</td>
-                    <td>Disponible desde herramientas automizadas</td>
-                    <td>Conocimiento Publico</td>
-                    <td>No Loegado</td>
-                    <td>Todos los datos divulgados</td>
-                    <td>Todos los datos totalmente corruptos.</td>
-                    <td>Todos los servicios completamente perdidos</td>
-                    <td>Completamente anónimo</td>
-                    <td>Bancarrota</td>
-                    <td>Daño de marca</td>
-                    <td></td>
-                    <td>Millones</td>
-                </tr>
-                <tr> </tr>
-            </tbody>
-        </table>
+                    </tr>
+                    <tr>
+                        <td class="table-success">4</td>
+                        <td></td>
+                        <td>Posible recompensa</td>
+                        <td>Acceso especial o recursos requeridos</td>
+                        <td>Usuarios de intranet</td>
+                        <td></td>
+                        <td></td>
+                        <td>Oculto</td>
+                        <td></td>
+                        <td>Datos críticos mínimos revelados, datos no sensibles extensos
+                            revelados</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Pérdida de cuentas importantes</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="table-success">5</td>
+                        <td>Uso Avanzado de computadoras</td>
+                        <td></td>
+                        <td></td>
+                        <td>Partners</td>
+                        <td></td>
+                        <td>Facil</td>
+                        <td></td>
+                        <td></td>
+                        <td>Extensos datos críticos revelados</td>
+                        <td>Amplios datos ligeramente corruptos</td>
+                        <td>Servicios primarios mínimos interrumpidos, servicios secundarios
+                            extensivos interrumpidos</td>
+                        <td></td>
+                        <td></td>
+                        <td>Pérdida de buena voluntad</td>
+                        <td>Clara violación</td>
+                        <td>cientos personas</td>
+                    </tr>
+                    <tr>
+                        <td class="table-success">6</td>
+                        <td>Habilidades
+                            en Redes y Programación</td>
+                        <td></td>
+                        <td></td>
+                        <td>Usuarios autenticados</td>
+                        <td></td>
+                        <td></td>
+                        <td>Ovio</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="table-success">7</td>
+                        <td></td>
+                        <td>Ganar Prestigio</td>
+                        <td>Se requiere cierto acceso o recursos</td>
+                        <td></td>
+                        <td>Facil</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Amplios datos seriamente corruptos</td>
+                        <td>Amplios servicios primarios interrumpidos</td>
+                        <td>Posiblemente rastreable</td>
+                        <td>Efecto significativo en la ganancia anual</td>
+                        <td></td>
+                        <td>Violación de alto nivel</td>
+                        <td>Miles Personas</td>
+                    </tr>
+                    <tr>
+                        <td class="table-success">8</td>
+                        <td></td>
+                        <td>Arruinar La imagen de el Software</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Registrado sin revisión</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="table-success">9</td>
+                        <td>Habilidades en Ciberseguridad</td>
+                        <td>Alta recompensa</td>
+                        <td>No se requiere acceso ni recursos</td>
+                        <td>Usuarios de internet anónimos</td>
+                        <td>Disponible desde herramientas automizadas</td>
+                        <td>Disponible desde herramientas automizadas</td>
+                        <td>Conocimiento Publico</td>
+                        <td>No Loegado</td>
+                        <td>Todos los datos divulgados</td>
+                        <td>Todos los datos totalmente corruptos.</td>
+                        <td>Todos los servicios completamente perdidos</td>
+                        <td>Completamente anónimo</td>
+                        <td>Bancarrota</td>
+                        <td>Daño de marca</td>
+                        <td></td>
+                        <td>Millones lorem*50</td>
+                    </tr>
+                    <tr> </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
