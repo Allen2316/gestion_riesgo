@@ -223,21 +223,135 @@
                 </thead>
                 <tbody class="text-center">
                     <tr>
+                        <td>
+                            <select id="confidencialidad" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - </option>
+                                <option value="2">2 - Datos mínimos no sensibles divulgados</option>
+                                <option value="3">3 - </option>
+                                <option value="4">4 - Datos críticos mínimos revelados, datos no sensibles</option>
+                                <option value="5">5 - Extensos datos críticos revelados</option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - </option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Todos los datos divulgados</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="integridad" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - Datos mínimos ligeramente corruptos</option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - Mínimo datos seriamente corruptos</option>
+                                <option value="4">4 - </option>
+                                <option value="5">5 - Amplios datos ligeramente corruptos</option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - Amplios datos seriamente corruptos </option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Todos los datos totalmente corruptos.</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="disponibilidad" class="form-select">
+                                <option value="0">0 - Ninguno</option>
+                                <option value="1">1 - Servicios secundarios mínimos interrumpidos</option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - </option>
+                                <option value="4">4 - </option>
+                                <option value="5">5 - Servicios primarios mínimos interrumpidos, servicio</option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - Amplios servicios primarios interrumpidos</option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Todos los servicios completamente perdidos</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="responsabilidad" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - totalmente rastreable</option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - </option>
+                                <option value="4">4 - </option>
+                                <option value="5">5 - </option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - Posiblemente rastreable</option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Completamente anónimo</option>
+                            </select>
+                        </td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <select id="financiero" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - Menos del costo para arreglar la vulnerabilidad</option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - Efecto menor en la ganancia anual.</option>
+                                <option value="4">4 - </option>
+                                <option value="5">5 - </option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - Efecto significativo en la ganancia anual</option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Bancarrota</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="reputacion" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - Daño Mínimo</option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - </option>
+                                <option value="4">4 - Pérdida de cuentas importantes</option>
+                                <option value="5">5 - Pérdida de buena voluntad</option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - </option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - Daño de marca </option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="cumplimiento" class="form-select">
+                                <option value="0">0 - </option>
+                                <option value="1">1 - </option>
+                                <option value="2">2 - violación menor</option>
+                                <option value="3">3 - </option>
+                                <option value="4">4 - </option>
+                                <option value="5">5 - Clara violación</option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - Violación de alto nivel</option>
+                                <option value="8">8 - </option>
+                                <option value="9">9 - </option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="privacidad" class="form-select">
+                                <option value="0">0 -</option>
+                                <option value="1">1 - </option>
+                                <option value="2">2 - </option>
+                                <option value="3">3 - Un individuo</option>
+                                <option value="4">4 - </option>
+                                <option value="5">5 - cientos personas</option>
+                                <option value="6">6 - </option>
+                                <option value="7">7 - Miles Personas</option>
+                                <option value="8"8 - ></option>
+                                <option value="9">9 - Millones</option>
+                            </select>
+
+                        </td>
+            
                     </tr>
-                    <tr class="table-success">
-                        <td colspan="2" class="text-end">Impacto general:</td>
-                        <td class="text-center">7.5</td>
-                        <td>ALTO</td>
+                    <tr>
+                        <td colspan="2" id="impTecGene">Impacto técnico general:</td>
+                        <td id="impTecRes"></td>
+                        <td id="impTecNivel"></td>
                         <td class="bg-white"></td>
-                        <td colspan="2" class="text-end">Impacto comercial general:</td>
-                        <td class="text-center">7.5</td>
-                        <td>ALTO</td>
+                        <td colspan="2" id="impCom">Impacto comercial general:</td>
+                        <td id="impComRes"></td>
+                        <td id="impComNivel"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="impGene">Impacto general:</td>
+                        <td id="impGeneRes"></td>
+                        <td colspan="4" id="impGeneNivel"></td>
                     </tr>
                 </tbody>
             </table>
@@ -322,11 +436,8 @@
 
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Características</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Precios</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Acerca</a></li>
+            <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-muted">Inicio</a></li>
+            <li class="nav-item"><a href="./rating.html" class="nav-link px-2 text-muted">Rating</a></li>
         </ul>
         <p class="text-center text-muted">© 2022 Luis Sarmiento - ALLEN23</p>
     </footer>
